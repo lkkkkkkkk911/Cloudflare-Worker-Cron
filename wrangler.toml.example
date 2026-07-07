@@ -1,0 +1,35 @@
+name = "cloudflare-monitor-worker"
+main = "src/index.js"
+compatibility_date = "2026-07-07"
+
+workers_dev = true
+
+kv_namespaces = [
+  { binding = "STATE_KV", id = "replace_with_your_kv_namespace_id" }
+]
+
+[vars]
+SITE_URLS = "https://example.com,https://example.org"
+SLOW_MS = "5000"
+
+CF_ACCOUNT_ID = "replace_with_your_account_id"
+CF_ZONE_IDS = "replace_with_zone_id_1,replace_with_zone_id_2"
+PAGES_PROJECTS = "all"
+
+WORKERS_DAILY_LIMIT = "100000"
+ERROR_ALERT_COUNT = "10"
+
+D1_DATABASE_LIMIT_BYTES = "524288000"
+R2_ACCOUNT_LIMIT_BYTES = "10737418240"
+KV_ACCOUNT_LIMIT_BYTES = "1073741824"
+ENABLE_KV_USAGE_SCAN = "false"
+KV_SCAN_MAX_KEYS = "2000"
+
+SSL_EXPIRE_DAYS = "14"
+
+[triggers]
+crons = [
+  "*/30 * * * *",
+  "0 4 * * *",
+  "0 15 * * *"
+]

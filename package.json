@@ -1,0 +1,19 @@
+{
+  "name": "cloudflare-monitor-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Workers site keepalive and resource monitor with Telegram notifications.",
+  "type": "module",
+  "private": false,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
