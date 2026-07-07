@@ -1,8 +1,8 @@
 # Cloudflare Worker Cron Monitor
 
-一个直接运行在 Cloudflare Workers 上的定时监控脚本，可用于站点保活、资源用量监控，并通过 Telegram 推送通知。
+一个直接运行在 Cloudflare Workers 上的定时监控脚本，可用于站点、资源用量监控，并通过 Telegram 推送通知。
 
-自用脚本，主要由 AI 辅助编写。
+自用脚本 由AI编写
 
 ## 功能
 
@@ -204,14 +204,5 @@ https://api.telegram.org/bot你的BotToken/getUpdates
 ```
 
 3. 返回内容里的 `chat.id` 就是 `TELEGRAM_CHAT_ID`
-
-## 开源发布注意事项
-
-- 不要把真实 Token 写进代码
-- 不要提交真实 `wrangler.toml`
-- Cloudflare 后台里的 Secrets 不会出现在 GitHub
-- `wrangler.toml.example` 只保留示例值
-
-## License
 
 MIT
