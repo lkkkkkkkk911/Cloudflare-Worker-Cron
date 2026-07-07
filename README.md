@@ -1,7 +1,7 @@
 # Cloudflare Monitor Worker
 
 一个部署在 Cloudflare Workers 上的站点保活和资源监控脚本，支持 Telegram 推送通知。
-
+（自用纯AI写的）
 ## 功能
 
 - 定时检查站点可访问性和响应耗时
@@ -118,13 +118,6 @@ npm run deploy
 - `src/index.js` 里的 `CONFIG.summaryCrons`
 
 Cloudflare Cron 使用 UTC 时间。
-
-## 开源发布前检查
-
-- 确认 `wrangler.toml` 没有提交到 GitHub
-- 确认所有 Token 和 Chat ID 都通过 `wrangler secret put` 设置
-- 确认 `wrangler.toml.example` 里只放示例值
-- 部署前先用 `npm run dev` 手动触发测试
 
 ## License
 
